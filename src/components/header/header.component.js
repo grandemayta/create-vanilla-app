@@ -1,9 +1,8 @@
-import template from './header.html';
+import template from './header.template.html';
 
 export default class Header extends HTMLElement {
   constructor() {
     super();
-    this.title = '';
   }
 
   connectedCallback() {

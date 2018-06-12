@@ -11,7 +11,7 @@ module.exports = {
   entry: `${src}/index.js`,
   output: {
     path: dist,
-    filename: process.env.NODE_ENV === 'PROD' ? 'bundle.app.min.js' : 'bundle.app.js'
+    filename: process.env.NODE_ENV === 'prod' ? 'bundle.app.min.js' : 'bundle.app.js'
   },
   module: {
     rules: [
@@ -30,12 +30,15 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin([dist]),
     new HtmlWebpackPlugin({
-      template: 'index.ejs',
+      template: 'index.html',
       filename: 'index.html'
     })
   ],
   resolve: {
     extensions: ['.js'],
-    modules: ['node_modules', 'src']
+    modules: ['node_modules', 'src'],
+    alias: {
+      components: `${src}/components`
+    }
   }
 };
