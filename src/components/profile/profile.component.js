@@ -5,22 +5,22 @@ export default class Profile extends HTMLElement {
     constructor() {
         super();
         this.id = '';
+        this.profile = {};
     }
 
-    connectedCallback() {
+    async connectedCallback() {
         this.id = this.getAttribute('data-id');
-        httpWrapper.get(`https://api.github.com/users/${this.id}`, data => {
-            render(this.template(data), this);
-        });
+        this.profile = await httpWrapper(`https://api.github.com/users/${this.id}`);
+        render(this.template(), this);
     }
 
-    template(profile) {
+    template() {
         return html`
             <div class="mui-panel mui--text-center">
-                <img style="width: 50%; border-radius: 50%;" src="${profile.avatar_url}">
-                <div class="mui--text-title">${profile.name}</div>
-                <div class="mui--text-subhead">${profile.company}</div>
-                <div class="mui--text-subhead">${profile.location}</div>
+                <img style="width: 50%; border-radius: 50%;" src="${this.profile.avatar_url}">
+                <div class="mui--text-title">${this.profile.name}</div>
+                <div class="mui--text-subhead">${this.profile.company}</div>
+                <div class="mui--text-subhead">${this.profile.location}</div>
             </div>
         `;
     }

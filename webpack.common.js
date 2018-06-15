@@ -8,7 +8,7 @@ const dist = path.resolve(__dirname, './dist');
 
 
 module.exports = {
-  entry: `${src}/index.js`,
+  entry: ['babel-polyfill', `${src}/index.js`],
   output: {
     path: dist,
     filename: process.env.NODE_ENV === 'prod' ? 'bundle.app.min.js' : 'bundle.app.js'

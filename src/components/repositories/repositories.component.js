@@ -1,11 +1,16 @@
 import { html, render } from 'lit-html';
+import { httpWrapper } from '../../services';
 
 export default class Repositories extends HTMLElement {
     constructor() {
         super();
+        this.id = '';
+        this.repositories = [];
     }
 
-    connectedCallback() {
+    async connectedCallback() {
+        this.id = this.getAttribute('data-id');
+        this.repositories = await httpWrapper(`https://api.github.com/users/${this.id}/repos`);
         render(this.template(), this);
     }
 
@@ -13,11 +18,12 @@ export default class Repositories extends HTMLElement {
         return html`
             <div class="mui-panel mui--text-center">
                 <h2 class="mui--text-left" style="margin-bottom: 30px;">Repositories</h2>
-                <button class="mui-btn mui-btn--flat">angularjs-tutorials</button>
-                <div class="mui-divider"></div>
-                <button class="mui-btn mui-btn--flat">backbone</button>
-                <div class="mui-divider"></div>
-                <button class="mui-btn mui-btn--flat">browserify-bundler</button>
+                ${this.repositories.map(repository => {
+                    return html`
+                        <button class="mui-btn mui-btn--flat">${repository.name}</button>
+                        <div class="mui-divider"></div>
+                    `;
+                })}
             </div>
         `;
     }

@@ -19,8 +19,8 @@ export default class Home extends HTMLElement {
                 <app-header></app-header>
                 <div style="padding-top: 20px;" class="mui-container">
                     <app-profile data-id=${this.id}></app-profile>
-                    <app-repositories></app-repositories>
-                    <app-followers></app-followers>
+                    <app-repositories data-id=${this.id}></app-repositories>
+                    <app-followers data-id=${this.id}></app-followers>
                 </div>
             </div>
         `;
