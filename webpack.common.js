@@ -6,7 +6,6 @@ const path = require('path');
 const src = path.resolve(__dirname, './src');
 const dist = path.resolve(__dirname, './dist');
 
-
 module.exports = {
   entry: [
     '@webcomponents/webcomponentsjs/webcomponents-bundle.js', 
