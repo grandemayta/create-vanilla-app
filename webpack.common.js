@@ -54,6 +54,11 @@ module.exports = {
   ],
   resolve: {
     extensions: ['.js', '.scss'],
-    modules: ['node_modules', 'src']
+    modules: ['node_modules', 'src'],
+    alias: {
+      components: `${src}/app/components`,
+      features: `${src}/app/features`,
+      styles: `${src}/styles`
+    }
   }
 };

@@ -1,3 +1,3 @@
-import Home from './home/home';
+import Home from 'features/home/home';
 
 export { Home };

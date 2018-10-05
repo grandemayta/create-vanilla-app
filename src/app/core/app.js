@@ -1,5 +1,5 @@
-import { Header } from '../components';
-import { Home } from '../features';
+import { Header } from 'components';
+import { Home } from 'features';
 
 /* COMPONENTS */
 customElements.define('app-header', Header);
