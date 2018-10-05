@@ -1,20 +1,30 @@
-const Webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
 const src = path.resolve(__dirname, './src');
 const dist = path.resolve(__dirname, './dist');
 
 module.exports = {
-  entry: [
-    '@webcomponents/webcomponentsjs/webcomponents-bundle.js', 
-    'babel-polyfill', 
-    `${src}/index.js`
-  ],
-  output: {
-    path: dist,
-    filename: process.env.NODE_ENV === 'prod' ? 'bundle.app.min.js' : 'bundle.app.js'
+  entry: {
+    vendor: [
+      '@webcomponents/webcomponentsjs/webcomponents-bundle',
+      '@polymer/lit-element'
+    ],
+    app: `${src}/app/core/app.js`
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          chunks: 'initial',
+          name: 'vendor',
+          test: 'vendor',
+          enforce: true
+        }
+      }
+    }
   },
   module: {
     rules: [
@@ -24,8 +34,13 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.html$/,
-        loader: 'html-loader',
+        test: /\.scss$/,
+        loader: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        exclude: /node_modules/
+      },
+      {
+        test: /\.(jpg|png|gif|eot|woff|woff2|ttf|svg)$/,
+        loader: 'file-loader',
         exclude: /node_modules/
       }
     ]
@@ -33,15 +48,12 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin([dist]),
     new HtmlWebpackPlugin({
-      template: 'index.html',
+      template: `${src}/app/index.html`,
       filename: 'index.html'
     })
   ],
   resolve: {
-    extensions: ['.js'],
-    modules: ['node_modules', 'src'],
-    alias: {
-      components: `${src}/components`
-    }
+    extensions: ['.js', '.scss'],
+    modules: ['node_modules', 'src']
   }
 };
