@@ -18,14 +18,6 @@ $ npm start
 $ npm run prod
 ```
 
-## Browsers support
-
-- [x] Chrome
-- [x] Firefox
-- [x] Safari
-- [x] Edge
-- [x] IE11
-
 ## Tech Stack
 
 ### Libraries
@@ -41,6 +33,14 @@ $ npm run prod
 - [Webpack](https://webpack.js.org/)
 - [Babel](https://babeljs.io/)
 - [Eslint](https://eslint.org/)
+
+## Browsers support
+
+- [x] Chrome
+- [x] Firefox
+- [x] Safari
+- [x] Edge
+- [x] IE11
 
 ## Todo
 
