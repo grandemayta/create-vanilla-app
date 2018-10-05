@@ -3,7 +3,7 @@
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![made-with-javascript-doc](https://img.shields.io/badge/Made%20with-Javascript-1f425f.svg)](https://www.sphinx-doc.org/)
 
-Build SPA with custom elements support. Everything that you need is ready to use.
+Build Web Components with custom elements support. Everything that you need is ready to use.
 
 ## Launch the application
 
@@ -25,11 +25,9 @@ $ npm run prod
 - [WebComponents](https://github.com/webcomponents/webcomponentsjs)
 - [Polyfill](https://babeljs.io/docs/en/babel-polyfill.html)
 - [LitElement](https://github.com/Polymer/lit-element)
-- [Navigo](https://github.com/krasimir/navigo)
 
 ### Tools
 
-- [Sass](https://sass-lang.com/)
 - [Webpack](https://webpack.js.org/)
 - [Babel](https://babeljs.io/)
 - [Eslint](https://eslint.org/)
