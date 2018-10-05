@@ -26,9 +26,24 @@ $ npm run prod
 - [x] Edge
 - [x] IE11
 
+## Tech Stack
+
+### Libraries
+
+- [WebComponents](https://github.com/webcomponents/webcomponentsjs)
+- [Polyfill](https://babeljs.io/docs/en/babel-polyfill.html)
+- [LitElement](https://github.com/Polymer/lit-element)
+- [Navigo](https://github.com/krasimir/navigo)
+
+### Tools
+
+- [Sass](https://sass-lang.com/)
+- [Webpack](https://webpack.js.org/)
+- [Babel](https://babeljs.io/)
+- [Eslint](https://eslint.org/)
+
 ## Todo
 
-- [ ] Add Tech Stack section in the Readme file
 - [ ] Handle paths with alias
 - [ ] Setup Unit Testing
 - [ ] Setup E2E Testing
