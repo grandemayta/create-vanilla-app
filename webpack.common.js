@@ -56,6 +56,7 @@ module.exports = {
     extensions: ['.js', '.scss'],
     modules: ['node_modules', 'src'],
     alias: {
+      assets: `${src}/assets`,
       components: `${src}/app/components`,
       features: `${src}/app/features`,
       styles: `${src}/styles`
