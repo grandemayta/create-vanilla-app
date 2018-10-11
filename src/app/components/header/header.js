@@ -1,19 +1,9 @@
-import { LitElement, html } from '@polymer/lit-element';
+import { html } from '@polymer/lit-element';
 
-export default class Header extends LitElement {
-  static get properties() {
-    return {
-      title: { type: String }
-    };
-  }
-
+export default class Header {
   style() {
     return html`
       <style>
-        * {
-          margin: 0;
-          padding: 0;
-        }
         header {
           display: flex;
           flex-direction: column;
@@ -42,7 +32,7 @@ export default class Header extends LitElement {
       ${this.style()}
       <header>
         <h1>Header</h1>
-        <h2>${this.title}</h2>
+        <h2>Sub header</h2>
       </header>
     `;
   }

@@ -1,5 +1,4 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 const src = path.resolve(__dirname, './src');
@@ -10,7 +9,7 @@ module.exports = {
     app: [
       '@webcomponents/webcomponentsjs/webcomponents-bundle',
       '@polymer/lit-element',
-      `${src}/index.js`
+      `${src}/app/component.js`
     ]
   },
   module: {
@@ -22,18 +21,13 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new CleanWebpackPlugin([dist]),
-    new HtmlWebpackPlugin({
-      template: `${src}/index.html`,
-      filename: 'index.html'
-    })
-  ],
+  plugins: [new CleanWebpackPlugin([dist])],
   resolve: {
     extensions: ['.js'],
     modules: ['node_modules', 'src'],
     alias: {
-      components: `${src}/components`
+      app: `${src}/app`,
+      components: `${src}/app/components`
     }
   }
 };
