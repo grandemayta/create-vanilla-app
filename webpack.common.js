@@ -37,8 +37,7 @@ module.exports = {
     extensions: ['.js'],
     modules: ['node_modules', 'src'],
     alias: {
-      app: `${src}/app`,
-      components: `${src}/app/components`
+      app: `${src}/app`
     }
   }
 };
