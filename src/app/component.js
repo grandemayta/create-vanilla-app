@@ -1,29 +1,15 @@
-import { render, html } from 'lit-html';
+import { LitElement, html } from '@polymer/lit-element';
 
-export default class MyComponent extends HTMLElement {
-  static get observedAttributes() {
-    return ['name'];
+export default class MyComponent extends LitElement {
+  static get properties() {
+    return {
+      name: { type: String }
+    };
   }
 
   constructor() {
     super();
-    this.rootEl = this;
     this.placeholder = 'Type your name...';
-    this.load();
-  }
-
-  get name() {
-    return this.getAttribute('name');
-  }
-
-  set name(value) {
-    this.setAttribute('name', value);
-  }
-
-  attributeChangedCallback(name, oldVal, newVal) {
-    if (oldVal !== null && oldVal !== newVal) {
-      this.load();
-    }
   }
 
   handleKeyUp(value) {
@@ -32,21 +18,30 @@ export default class MyComponent extends HTMLElement {
     }
   }
 
-  template() {
+  render() {
     return html`
-      <div>
+      <style>
+        section, h1, h2, input {
+          margin: 0;
+          padding: 0 0 20px 0;
+        }
+        section {
+          padding: 20px;
+          background-color: #f0f0f0;
+          border-radius: 3px;
+        }
+        input {
+          padding: 10px;
+        }
+      </style>
+      <section>
         <h1>I'm a Custom Element</h1>
         <h2>Hi ${this.name}!</h2>
         <input 
           @keyup=${e => this.handleKeyUp(e.target.value)} 
           placeholder=${this.placeholder}
           type="text">
-      </div>`;
-  }
-
-  load() {
-    this.name = this.getAttribute('name');
-    render(this.template(), this.rootEl);
+      </section>`;
   }
 }
 
