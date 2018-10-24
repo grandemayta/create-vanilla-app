@@ -24,7 +24,7 @@ $ npm run prod
 
 - [@webcomponents/webcomponentsjs](https://github.com/webcomponents/webcomponentsjs)
 - [Polyfill](https://babeljs.io/docs/en/babel-polyfill.html)
-- [Lit-element](https://github.com/Polymer/lit-html)
+- [Lit-element](https://github.com/Polymer/lit-element)
 
 ### Tools
 
