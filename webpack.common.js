@@ -7,6 +7,7 @@ const dist = path.resolve(__dirname, './dist');
 module.exports = {
   entry: {
     app: [
+      'core-js/fn/symbol',
       '@webcomponents/webcomponentsjs/webcomponents-bundle.js',
       `${src}/app/component.js`
     ]
