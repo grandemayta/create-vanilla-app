@@ -16,7 +16,10 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules\/(?!(@webcomponents\/shadycss|lit-html|@polymer|@lit)\/).*/,
+        options: {
+          cacheDirectory: true
+        }
       }
     ]
   },
