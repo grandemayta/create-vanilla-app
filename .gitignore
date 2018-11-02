@@ -1,5 +1,3 @@
 node_modules
-dist/index.js
-dist/index.html
-dist/polyfill.js
+dist
 .vscode
