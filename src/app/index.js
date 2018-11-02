@@ -5,7 +5,7 @@ if (
   'customElements' in window &&
   // ARRAYS
   'entries' in Array.prototype &&
-  'from' in Array.prototype &&
+  'from' in Array &&
   'findIndex' in Array.prototype &&
   'includes' in Array.prototype &&
   'keys' in Array.prototype &&
