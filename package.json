@@ -1,6 +1,6 @@
 {
   "name": "webcomponents-scaffolding",
-  "main": "dist/index.min.js",
+  "main": "dist/app.min.js",
   "version": "1.0.0",
   "author": {
     "name": "Gabriel Mayta",
