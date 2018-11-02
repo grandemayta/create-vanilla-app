@@ -12,7 +12,7 @@ module.exports = merge(common, {
     path: dist,
     filename: '[name].js'
   },
-  devtool: 'none',
+  devtool: 'cheap-module-eval-source-map',
   devServer: {
     contentBase: dist,
     port: 3002,

@@ -8,6 +8,11 @@ module.exports = {
   entry: {
     app: ['core-js/fn/promise', `${src}/app/index.js`]
   },
+  optimization: {
+    splitChunks: {
+      maxAsyncRequests: 1
+    }
+  },
   module: {
     rules: [
       {
