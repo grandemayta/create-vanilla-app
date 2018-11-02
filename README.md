@@ -51,6 +51,7 @@ If the broswer doesn't support webcomponents, custom elements or es6 features li
 - Arrays
     - entries
     - from
+    - find
     - findIndex
     - includes
     - keys

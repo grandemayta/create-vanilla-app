@@ -6,6 +6,7 @@ if (
   // ARRAYS
   'entries' in Array.prototype &&
   'from' in Array &&
+  'find' in Array &&
   'findIndex' in Array.prototype &&
   'includes' in Array.prototype &&
   'keys' in Array.prototype &&

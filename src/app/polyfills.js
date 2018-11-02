@@ -6,6 +6,7 @@ import '@webcomponents/webcomponentsjs/webcomponents-bundle.js';
 // ARRAYS
 import 'core-js/fn/array/entries';
 import 'core-js/fn/array/from';
+import 'core-js/fn/array/find';
 import 'core-js/fn/array/find-index';
 import 'core-js/fn/array/includes';
 import 'core-js/fn/array/keys';
