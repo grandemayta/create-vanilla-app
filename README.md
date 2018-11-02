@@ -40,6 +40,32 @@ $ npm run prod
 - [x] Edge
 - [x] IE11
 
+## Polyfills
+If the broswer don't support webcomponents, custom elements or es6 features like fetch and includes the polyfill script will add at runtime. Below you can find the features supported:
+
+- Generics
+    - Symbol
+    - fetch
+    - customElements
+
+- Arrays
+    - entries
+    - from
+    - findIndex
+    - includes
+    - keys
+    - values
+
+- Objects
+    - assign
+    - entries
+    - values
+
+- Strings
+    - endsWith
+    - includes
+    - startsWith
+
 ## Todo
 
 - [ ] Setup Unit Testing
