@@ -41,7 +41,7 @@ $ npm run prod
 - [x] IE11
 
 ## Polyfills
-If the broswer don't support webcomponents, custom elements or es6 features like fetch and includes the polyfill script will add at runtime. Below you can find the features supported:
+If the broswer doesn't support webcomponents, custom elements or es6 features like fetch and includes the polyfill script will add at runtime. Below you can find the features supported:
 
 - Generics
     - Symbol
