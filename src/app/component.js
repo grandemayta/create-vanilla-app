@@ -44,5 +44,3 @@ export default class MyComponent extends LitElement {
       </section>`;
   }
 }
-
-customElements.define('app-my-component', MyComponent);

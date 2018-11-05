@@ -1,3 +1,9 @@
+import MyComponent from './component';
+
+const boostrap = () => {
+  customElements.define('app-my-component', MyComponent);
+};
+
 if (
   // OTHERS
   'Symbol' in window &&
@@ -20,9 +26,7 @@ if (
   'includes' in String.prototype &&
   'startsWith' in String.prototype
 ) {
-  require('./component');
+  boostrap();
 } else {
-  import(/* webpackChunkName: "polyfills" */ './polyfills').then(() => {
-    require('./component');
-  });
+  import(/* webpackChunkName: "polyfills" */ './polyfills').then(() => boostrap());
 }
