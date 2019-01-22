@@ -34,9 +34,9 @@ const bootstrapPolyfills = () => {
 };
 
 if ('Promise' in window) {
+  bootstrapPolyfills();
+} else {
   import(/* webpackChunkName: "promise" */ 'core-js/fn/promise').then(() => {
     bootstrapPolyfills();
   });
-} else {
-  bootstrapPolyfills();
 }
