@@ -6,7 +6,7 @@ const dist = path.resolve(__dirname, './dist');
 
 module.exports = {
   entry: {
-    app: ['core-js/fn/promise', `${src}/app/index.js`]
+    bundle: `${src}/app/index.js`
   },
   optimization: {
     splitChunks: {
@@ -33,9 +33,6 @@ module.exports = {
   plugins: [new CleanWebpackPlugin([dist])],
   resolve: {
     extensions: ['.js'],
-    modules: ['node_modules', 'src'],
-    alias: {
-      app: `${src}/app`
-    }
+    modules: ['node_modules', 'src']
   }
 };
