@@ -6,12 +6,7 @@ const dist = path.resolve(__dirname, './dist');
 
 module.exports = {
   entry: {
-    bundle: `${src}/app/index.js`
-  },
-  optimization: {
-    splitChunks: {
-      maxAsyncRequests: 1
-    }
+    bundle: ['core-js/fn/promise', `${src}/app/index.js`]
   },
   module: {
     rules: [

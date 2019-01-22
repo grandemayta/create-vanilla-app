@@ -12,6 +12,11 @@ module.exports = merge(common, {
     path: dist,
     filename: '[name].js'
   },
+  optimization: {
+    splitChunks: {
+      maxAsyncRequests: 1
+    }
+  },
   devtool: 'cheap-module-eval-source-map',
   devServer: {
     contentBase: dist,
