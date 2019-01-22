@@ -7,10 +7,10 @@
   },
   "scripts": {
     "pretest": "eslint . --fix",
-    "start": "webpack-dev-server --config webpack.dev.js",
-    "dev": "webpack --config webpack.dev.js",
-    "prod": "webpack --config webpack.prod.js",
-    "prod:vendor": "webpack --config webpack.prod.vendor.js"
+    "start": "webpack-dev-server --config scripts/webpack.dev.js",
+    "dev": "webpack --config scripts/webpack.dev.js",
+    "prod": "webpack --config scripts/webpack.prod.js",
+    "prod:vendor": "webpack --config scripts/webpack.prod.vendor.js"
   },
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^2.1.3",
