@@ -1,6 +1,6 @@
 {
   "name": "webcomponents-scaffolding",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "author": {
     "name": "Gabriel Mayta",
     "email": "grandemayta@gmail.com"
@@ -9,13 +9,14 @@
     "pretest": "eslint . --fix",
     "start": "webpack-dev-server --config scripts/webpack.dev.js",
     "dev": "webpack --config scripts/webpack.dev.js",
+    "dev:legacy": "webpack --config scripts/webpack.dev.js",
     "prod": "webpack --config scripts/webpack.prod.js",
-    "prod:vendor": "webpack --config scripts/webpack.prod.vendor.js"
+    "prod:legacy": "webpack --config scripts/webpack.prod.js"
   },
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^2.1.3",
     "core-js": "^2.5.7",
-    "lit-element": "^2.0.0-rc.3",
+    "lit-element": "^2.0.1",
     "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
@@ -27,13 +28,16 @@
     "babel-eslint": "^8.2.5",
     "babel-loader": "^8.0.2",
     "clean-webpack-plugin": "^0.1.17",
+    "css-loader": "^2.1.0",
     "eslint": "^5.0.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-config-xo": "^0.23.0",
     "eslint-plugin-prettier": "^2.6.1",
     "html-webpack-plugin": "^3.2.0",
+    "lit-loader": "^0.1.0",
     "path": "^0.12.7",
     "prettier": "^1.13.7",
+    "style-loader": "^0.23.1",
     "webpack": "^4.17.2",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.14",

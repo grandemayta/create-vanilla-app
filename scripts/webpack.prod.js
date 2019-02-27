@@ -1,18 +1,27 @@
 const merge = require('webpack-merge');
 const common = require('./webpack.common');
+const commonLegacy = require('./webpack.common.legacy');
+const getSubNpmTask = require('./getSubNpmTask');
+const isLegacy = getSubNpmTask(process);
 const path = require('path');
-
 const dist = path.resolve(__dirname, '../dist');
 
-module.exports = merge(common, {
+let config = common;
+
+if (isLegacy) config = commonLegacy;
+
+module.exports = merge(config, {
   mode: 'production',
   optimization: {
     splitChunks: {
-      maxAsyncRequests: 1
+      chunks(chunk) {
+        return chunk.name !== 'polyfills';
+      },
+      name: 'vendor'
     }
   },
   output: {
     path: dist,
-    filename: '[name].min.js'
+    filename: isLegacy ? '[name].legacy.min.js' : '[name].min.js'
   }
 });

@@ -1,7 +1,7 @@
-import MyComponent from './component';
+import Bootstrap from './component';
 
 const bootstrap = () => {
-  customElements.define('app-my-component', MyComponent);
+  customElements.define('app-bootstrap', Bootstrap);
 };
 
 if (

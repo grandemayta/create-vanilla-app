@@ -6,28 +6,24 @@ const dist = path.resolve(__dirname, '../dist');
 
 module.exports = {
   entry: {
-    bundle: ['core-js/fn/promise', `${src}/app/index.js`]
+    bundle: `${src}/app/index.js`
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: [
-          /node_modules\/*\/src/,
-          /node_modules\/@polymer/,
-          /node_modules\/lit-html/,
-          /src/
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'css-loader'
+          }
         ],
-        options: {
-          cacheDirectory: true
-        }
+        exclude: /node_modules/
       }
     ]
   },
   plugins: [new CleanWebpackPlugin([dist])],
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.js', '.css'],
     modules: ['node_modules', 'src']
   }
 };
