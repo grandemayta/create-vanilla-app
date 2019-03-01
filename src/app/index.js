@@ -1,8 +1,6 @@
-import Bootstrap from './component';
+import * as Bootstrap from './component';
 
-const bootstrap = () => {
-  customElements.define('app-bootstrap', Bootstrap);
-};
+const bootstrap = () => Bootstrap;
 
 if (
   // OTHERS

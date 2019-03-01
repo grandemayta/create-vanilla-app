@@ -1,11 +1,4 @@
-import { LitElement, html } from 'lit-element';
-import './components/greetings';
+import Teams from './teams/teams';
+import Button from './button/button';
 
-export default class Bootstrap extends LitElement {
-  render() {
-    return html`
-      <h1>I'm a Web Component</h1>
-      <app-greetings name="Gabriel"></app-greetings>
-    `;
-  }
-}
+export { Teams, Button };
