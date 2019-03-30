@@ -1,4 +1,4 @@
-import * as Bootstrap from './component';
+import Bootstrap from './component';
 
 const bootstrap = () => Bootstrap;
 
@@ -25,6 +25,4 @@ if (
   'startsWith' in String.prototype
 ) {
   bootstrap();
-} else {
-  import(/* webpackChunkName: "polyfills" */ './polyfills').then(() => bootstrap());
 }

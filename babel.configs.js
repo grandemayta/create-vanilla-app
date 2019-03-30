@@ -1,23 +1,15 @@
-module.exports = {
-  presets: [
-    [
-      '@babel/preset-env',
-      {
-        modules: false,
-        targets: {
-          ie: 11
-        }
+const presets = [
+  [
+    '@babel/preset-env',
+    {
+      targets: {
+        ie: 11
       }
-    ]
-  ],
-  plugins: [
-    '@babel/plugin-syntax-dynamic-import',
-    [
-      '@babel/plugin-transform-runtime',
-      {
-        helpers: false,
-        regenerator: true
-      }
-    ]
+    }
   ]
+];
+
+module.exports = {
+  presets,
+  plugins: ['@babel/plugin-syntax-dynamic-import']
 };

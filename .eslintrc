@@ -14,6 +14,10 @@
       ]
     },
     "parser": "babel-eslint",
+    "parserOptions": {
+      "sourceType": "module",
+      "allowImportExportEverywhere": true
+    },
     "plugins": [
       "prettier"
     ]
