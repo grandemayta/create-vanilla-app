@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const NoModulePlugin = require('webpack-nomodule-plugin').WebpackNoModulePlugin;
 const merge = require('webpack-merge');
 const common = require('./webpack.common');
 const path = require('path');
@@ -26,7 +27,19 @@ module.exports = merge(common, {
   plugins: [
     new HtmlWebpackPlugin({
       template: `${src}/demo/index.html`,
-      filename: 'index.html'
+      minify: {
+        removeScriptTypeAttributes: true
+      },
+      filename: 'index.html',
+      chunks: [
+        'polyfills',
+        'vendor',
+        'bundle'
+      ],
+      chunksSortMode: "manual"
+    }),
+    new NoModulePlugin({
+      filePatterns: ['polyfills**.js']
     })
   ]
 });

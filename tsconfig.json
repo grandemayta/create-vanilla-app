@@ -4,7 +4,7 @@
       "baseUrl": ".",
       "module": "es6",
       "moduleResolution": "node",
-      "target": "es2016",
+      "target": "esnext",
         "sourceMap": true,
         "lib": [
             "es2017",
