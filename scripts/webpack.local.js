@@ -27,16 +27,16 @@ module.exports = merge(common, {
   plugins: [
     new HtmlWebpackPlugin({
       template: `${src}/demo/index.html`,
-      minify: {
-        removeScriptTypeAttributes: true
-      },
       filename: 'index.html',
       chunks: [
         'polyfills',
         'vendor',
         'bundle'
       ],
-      chunksSortMode: "manual"
+      chunksSortMode: "manual",
+      minify: {
+        removeScriptTypeAttributes: true
+      }
     }),
     new NoModulePlugin({
       filePatterns: ['polyfills**.js']
