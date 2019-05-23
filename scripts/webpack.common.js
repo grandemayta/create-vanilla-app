@@ -6,18 +6,18 @@ const dist = path.resolve(__dirname, '../dist');
 
 module.exports = {
   entry: {
-    bundle: ['core-js/fn/promise', `${src}/app/index.js`]
+    bundle: `${src}/app/index.ts`
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
-        loader: 'babel-loader'
+        test: /\.ts?$/,
+        loader: 'ts-loader'
       }
     ]
   },
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.ts', '.js'],
     modules: ['node_modules', 'src']
   },
   plugins: [

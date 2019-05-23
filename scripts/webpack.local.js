@@ -17,7 +17,7 @@ module.exports = merge(common, {
       maxAsyncRequests: 1
     }
   },
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   devServer: {
     contentBase: dist,
     port: 3002,
