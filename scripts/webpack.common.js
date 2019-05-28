@@ -1,20 +1,21 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
-
+const env = process.env.NODE_ENV;
 const src = path.resolve(__dirname, '../src');
 const dist = path.resolve(__dirname, '../dist');
 
 module.exports = {
   entry: {
+    // Promise, CustomEvents, Symbol, Array.from and Object.Assign
+    // will load by webcomponents-loader.js
     polyfills: [
       // OTHERS
-      'core-js/fn/symbol',
       'whatwg-fetch',
-      'custom-event-polyfill',
+      'intersection-observer',
 
       // ARRAYS
       'core-js/fn/array/entries',
-      'core-js/fn/array/from',
       'core-js/fn/array/find',
       'core-js/fn/array/find-index',
       'core-js/fn/array/includes',
@@ -22,7 +23,6 @@ module.exports = {
       'core-js/fn/array/values',
 
       // OBJECTS
-      'core-js/fn/object/assign',
       'core-js/fn/object/entries',
       'core-js/fn/object/values',
 
@@ -31,8 +31,8 @@ module.exports = {
       'core-js/fn/string/includes',
       'core-js/fn/string/starts-with'
     ],
+    webcomponents: '@webcomponents/webcomponentsjs/webcomponents-loader.js',
     vendor: [
-      '@webcomponents/webcomponentsjs/webcomponents-loader.js',
       'lit-element'
     ],
     bundle: `${src}/app/index.ts`
@@ -54,7 +54,13 @@ module.exports = {
     rules: [
       {
         test: /\.ts?$/,
-        loader: 'ts-loader'
+        use: 'ts-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.js?$/,
+        use: 'babel-loader',
+        exclude: /webcomponentsjs/
       }
     ]
   },

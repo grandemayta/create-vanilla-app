@@ -30,6 +30,7 @@ module.exports = merge(common, {
       filename: 'index.html',
       chunks: [
         'polyfills',
+        'webcomponents',
         'vendor',
         'bundle'
       ],

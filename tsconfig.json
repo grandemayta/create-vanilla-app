@@ -1,16 +1,15 @@
 {
     "compilerOptions": {
-      "experimentalDecorators": true,
       "baseUrl": ".",
-      "module": "es6",
+      "experimentalDecorators": true,
+      "module": "esnext",
       "moduleResolution": "node",
       "target": "esnext",
-        "sourceMap": true,
-        "lib": [
-            "es2017",
-            "dom"
-        ],
-        "allowJs": true
+      "lib": [
+        "es2018",
+        "dom"
+       ],
+       "allowJs": true
     },
     "include": [
         "src/**/*"
