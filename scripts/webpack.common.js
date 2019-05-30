@@ -1,7 +1,5 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
-const env = process.env.NODE_ENV;
 const src = path.resolve(__dirname, '../src');
 const dist = path.resolve(__dirname, '../dist');
 
@@ -54,13 +52,13 @@ module.exports = {
     rules: [
       {
         test: /\.ts?$/,
-        use: 'ts-loader',
+        loader: 'babel-loader',
         exclude: /node_modules/
       },
       {
         test: /\.js?$/,
-        use: 'babel-loader',
-        exclude: /webcomponentsjs/
+        loader: 'babel-loader',
+        include: /lit/
       }
     ]
   },

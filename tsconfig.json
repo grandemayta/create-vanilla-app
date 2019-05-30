@@ -1,17 +1,18 @@
 {
     "compilerOptions": {
       "baseUrl": ".",
-      "experimentalDecorators": true,
       "module": "esnext",
+      "target": "es5",
       "moduleResolution": "node",
-      "target": "esnext",
+      "allowJs": true,
+      "experimentalDecorators": true,
       "lib": [
         "es2018",
         "dom"
-       ],
-       "allowJs": true
+       ]
     },
     "include": [
-        "src/**/*"
+        "src",
+        "node_modules/lit-element"
     ]
 }

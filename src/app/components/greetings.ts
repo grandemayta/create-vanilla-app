@@ -1,9 +1,9 @@
 import { LitElement, html, customElement, property } from 'lit-element';
 
 @customElement('app-greetings')
-export class Greetings extends LitElement {
+class Greetings extends LitElement {
   @property()
-  fullname: string
+  fullname: string = '';
 
   render() {
     return html`
@@ -11,3 +11,5 @@ export class Greetings extends LitElement {
     `;
   }
 }
+
+export { Greetings };
