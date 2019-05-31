@@ -1,4 +1,5 @@
 const CopyPlugin = require('copy-webpack-plugin');
+const argv = require('minimist')(process.argv.slice(2));
 const UglifyJS = require("uglify-es");
 const path = require('path');
 const merge = require('webpack-merge');
@@ -6,14 +7,17 @@ const polyfills = require('./polyfills');
 const common = require('./webpack.common');
 const dist = path.resolve(__dirname, '../dist');
 
-module.exports = merge(common, {
+const webpackProdConfig = merge(common, {
   mode: 'production',
-  entry: { polyfills },
   output: {
     path: dist,
     filename: '[name].min.js'
-  },
-  plugins: [
+  }
+});
+
+if (argv['legacy']) {
+  webpackProdConfig.entry.polyfills = polyfills;
+  webpackProdConfig.plugins.push(
     new CopyPlugin([
       {
         from: 'node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js',
@@ -31,5 +35,7 @@ module.exports = merge(common, {
         }
       }
     ]),
-  ]
-});
+  );
+}
+
+module.exports = webpackProdConfig;
