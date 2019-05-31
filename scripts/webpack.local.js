@@ -29,8 +29,6 @@ module.exports = merge(common, {
       template: `${src}/demo/index.html`,
       filename: 'index.html',
       chunks: [
-        'polyfills',
-        'webcomponents',
         'vendor',
         'bundle'
       ],

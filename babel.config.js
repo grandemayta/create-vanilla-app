@@ -3,8 +3,7 @@ module.exports = {
     ['@babel/preset-env', {
       targets: {
         browsers: ['last 2 Chrome versions', 'safari >= 7']
-      },
-      exclude: ['transform-classes']
+      }
     }],
     '@babel/typescript'
   ],
