@@ -5,7 +5,6 @@
 
 WebComponents CLI allow you to develop WebComponents from scratch with LitElement and Typescript.
 
-
 ## Install
 
 ```sh
@@ -73,6 +72,12 @@ We support the following features:
 ```sh
 npm run prod
 ```
+
+## Todo
+
+- [ ] Improve the documentation
+- [ ] Setup Unit Testing
+- [ ] Setup E2E Testing
 
 Keep calm and code!
 <br>
