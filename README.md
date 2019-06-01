@@ -68,6 +68,8 @@ We support the following features:
 <br/>
 :white_check_mark: IE11
 
+**NB: In order to support legacy browsers like IE11 and Safari 9 you have to launch npm run prod:legacy**
+
 Keep calm and code!
 <br>
 [![Open Source Love](https://badges.frapsoft.com/os/v3/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
