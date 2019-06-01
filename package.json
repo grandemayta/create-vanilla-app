@@ -25,6 +25,14 @@
     "path": "^0.12.7",
     "yarn": "^1.16.0"
   },
+  "description": "WebComponents CLI allow you to develop WebComponents from scratch with LitElement and Typescript",
+  "keywords": [
+    "webcomponents",
+    "litelement",
+    "lithtml",
+    "customelements",
+    "typescript"
+  ],
   "repository": "https://github.com/grandemayta/webcomponents-cli.git",
   "license": "MIT"
 }
