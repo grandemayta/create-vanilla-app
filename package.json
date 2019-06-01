@@ -1,5 +1,5 @@
 {
-  "name": "webcomponents-cli",
+  "name": "@grandemayta/webcomponents-cli",
   "main": "cli.js",
   "preferGlobal": true,
   "bin": {
