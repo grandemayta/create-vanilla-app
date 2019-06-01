@@ -52,8 +52,8 @@ class WebComponentsCLI {
 
   async createProject() {
     const name = argv['_'][0];
-    this.dest = path.resolve(__dirname, name);
-    
+    this.dest = path.resolve(name);
+
     await this.showLogo();
     
     const anwsers = await inquirer.prompt(questions);

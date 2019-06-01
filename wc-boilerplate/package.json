@@ -8,8 +8,10 @@
   "scripts": {
     "pretest": "eslint . --fix",
     "start": "webpack-dev-server --config scripts/webpack.local.js",
-    "dev": "webpack --config scripts/webpack.dev.js",
-    "prod": "webpack --config scripts/webpack.prod.js"
+    "dev": "webpack-cli --config scripts/webpack.dev.js",
+    "prod": "webpack-cli --config scripts/webpack.prod.js",
+    "dev:legacy": "webpack-cli --config scripts/webpack.dev.js --legacy",
+    "prod:legacy": "webpack-cli --config scripts/webpack.prod.js --legacy"
   },
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^2.2.10",
