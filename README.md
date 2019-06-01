@@ -19,15 +19,15 @@ Launch the following commands to start the application:
 npm start
 ```
 
-## Commands Available:
+## Scripts:
 
 | Command | Description |
 | ------ | ------ |
-| yarn start | Lift the application in local mode |
-| yarn dev | Generate a build in dev mode |
-| yarn prod | Generate a build in prod mode |
-| yarn dev:legacy | Generate a build in dev mode to support legacy browsers |
-| yarn prod:legacy | Generate a build in prod mode to support legacy browsers |
+| npm start | Lift the application in local mode |
+| npm run dev | Generate a build in dev mode |
+| npm run prod | Generate a build in prod mode |
+| npm run dev:legacy | Generate a build in dev mode to support legacy browsers |
+| npm run prod:legacy | Generate a build in prod mode to support legacy browsers |
 
 Keep calm and code!
 <br>
