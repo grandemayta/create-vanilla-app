@@ -29,6 +29,45 @@ npm start
 | npm run dev:legacy | Generate a build in dev mode to support legacy browsers |
 | npm run prod:legacy | Generate a build in prod mode to support legacy browsers |
 
+## Polyfills
+We support the following features:
+
+- Generics
+    - Symbol
+    - fetch
+    - Promise
+
+- Arrays
+    - entries
+    - from
+    - find
+    - findIndex
+    - includes
+    - keys
+    - values
+
+- Objects
+    - assign
+    - entries
+    - values
+
+- Strings
+    - endsWith
+    - includes
+    - startsWith
+
+## Browsers support
+
+:white_check_mark: Chrome
+<br/>
+:white_check_mark: Firefox
+<br/>
+:white_check_mark: Safari
+<br/>
+:white_check_mark: Edge
+<br/>
+:white_check_mark: IE11
+
 Keep calm and code!
 <br>
 [![Open Source Love](https://badges.frapsoft.com/os/v3/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
