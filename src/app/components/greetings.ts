@@ -1,11 +1,11 @@
-import { LitElement, html, customElement, property } from 'lit-element';
+import { customElement, html, LitElement, property } from 'lit-element';
 
 @customElement('app-greetings')
 class Greetings extends LitElement {
   @property()
-  fullname: string = '';
+  private fullname: string = '';
 
-  render() {
+  public render() {
     return html`
       <h1>Hello ${this.fullname}</h1>
     `;
