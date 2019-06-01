@@ -5,6 +5,7 @@ const figlet = require('figlet');
 const chalk = require('chalk');
 const memFs = require('mem-fs');
 const memFsEditor = require('mem-fs-editor');
+const npm = require('npm');
 const argv = require('minimist')(process.argv.slice(2));
 const questions = require('./questions');
 const mfsEditor = memFsEditor.create(memFs.create());
@@ -13,11 +14,12 @@ class WebComponentsCLI {
   constructor() {
     this.src = path.resolve(__dirname, './wc-boilerplate');
     this.dest = ''
+    this.log = console.log;
   }
 
-  printLogo() {
+  showLogo() {
     clear();
-    console.log(
+    this.log(
       chalk.yellow(
         figlet.textSync('Web Components', {
           horizontalLayout: 'default',
@@ -27,23 +29,48 @@ class WebComponentsCLI {
     );
   }
 
-  showError(message) {
-    console.log(chalk.red(`[WC CLI] Error: ${message}`));
+  showInfo(message) {
+    this.log(chalk.blue(`[WC CLI] Info: ${message}`));
   }
 
-  async load() {
-    if (argv['_'].length > 0) {
-      const name = argv['_'][0];
-      this.dest = path.resolve(__dirname, name);
+  showSuccess(message) {
+    this.log(chalk.green(`[WC CLI] Success: ${message}`));
+  }
 
-      await this.printLogo();
+  showError(message) {
+    this.log(chalk.red(`[WC CLI] Error: ${message}`));
+  }
+
+  copyBoilerplate(projectData) {
+    mfsEditor.copyTpl(
+      `${this.src}`,
+      `${this.dest}`,
+      projectData
+    );
+  }
+
+  async createProject() {
+    const name = argv['_'][0];
+    this.dest = path.resolve(__dirname, name);
     
-      const anwsers = await inquirer.prompt(questions);
-      console.log('ANWERS:::::::::', name, anwsers);
-      mfsEditor.copy(
-        `${this.src}/babel-config.js`,
-        `${this.staticPath}/${this.name}.html`
-      );
+    await this.showLogo();
+    
+    const anwsers = await inquirer.prompt(questions);
+
+    this.copyBoilerplate({name, ...anwsers});
+
+    mfsEditor.commit(() => {
+      process.chdir(this.dest);
+      npm.load(() => npm.commands.install([], () => {
+        this.showSuccess(`${name} project has been successfully created!`);
+        this.showInfo('To launch the application just type npm start');
+      }));
+    });
+  }
+
+  load() {
+    if (argv['_'].length > 0) {
+      this.createProject();
     } else {
       this.showError('Type the name of your application!');
     }
