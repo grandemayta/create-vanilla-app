@@ -1,5 +1,10 @@
 {
   "name": "webcomponents-cli",
+  "main": "cli.js",
+  "preferGlobal": true,
+  "bin": {
+    "wc-cli": "cli.js"
+  },
   "version": "0.0.1",
   "author": {
     "name": "Gabriel Mayta",
@@ -7,7 +12,7 @@
     "url": "https://github.com/grandemayta"
   },
   "scripts": {
-    "start": "node ./wc-cli.js"
+    "start": "node ./cli.js"
   },
   "dependencies": {
     "chalk": "^2.4.2",
