@@ -43,7 +43,7 @@ Build tasks will create the following output:
         ├── vendor.min.js
         ├── bundle.min.js
 
-#### Build to add support for legacy browsers:
+#### Build with support for legacy browsers:
 
     ├── dist/
         ├── polyfills.min.js
