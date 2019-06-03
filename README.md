@@ -38,28 +38,23 @@ npm start
 Npm build task will create the following output:
 
 ### Build for modern browsers:
-.
-├── dist
-    ├── vendor.min.js
-    ├── bundle.min.js
-├── fixtures                    # Main template
-    ├── data
-        ├── example.json
-    ├── index.pug
+
+    ├── dist/
+        ├── vendor.min.js
+        ├── bundle.min.js
 
 ### Build to add support to legacy browsers:
 
-.
-├── dist
-    ├── polyfills.min.js
-    ├── webcomponents-loader.js
-    ├── vendor.min.js
-    ├── bundle.min.js
-    ├── bundles                             # These scripts will load at runtime
-        ├── webcomponents-ce.js
-        ├── webcomponents-sd-ce-pf.js
-        ├── webcomponents-sd-ce.js
-        ├── webcomponents-sd.js
+    ├── dist/
+        ├── polyfills.min.js
+        ├── webcomponents-loader.js
+        ├── vendor.min.js
+        ├── bundle.min.js
+        ├── bundles/                             # These scripts will load at runtime
+            ├── webcomponents-ce.js
+            ├── webcomponents-sd-ce-pf.js
+            ├── webcomponents-sd-ce.js
+            ├── webcomponents-sd.js
 
 ```html
 <!DOCTYPE html>
