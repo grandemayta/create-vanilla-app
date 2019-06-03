@@ -34,6 +34,30 @@ npm start
 | npm run dev:legacy | Generate a build in dev mode to support legacy browsers |
 | npm run prod:legacy | Generate a build in prod mode to support legacy browsers |
 
+# Integration
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Components Integration</title>
+</head>
+<body>
+
+    <app-greetings fullname="Gabriel"></app-greetings>
+
+    <!-- If you want support legacy browser just remove this comment
+    <script src="polyfills.min.js" nomodule></script>
+    <script src="webcomponents-loader.js"></script>
+    -->
+    <script src="vendor.min.js"></script>
+    <script src="bundle.min.js"></script>
+</body>
+</html>
+```
+
 ## Polyfills
 We support the following features:
 
@@ -76,7 +100,7 @@ We support the following features:
 **NB: In order to support legacy browsers like IE11 and Safari 9 you have to launch the following script:**
 
 ```sh
-npm run prod
+npm run prod:legacy
 ```
 
 ## Todo
