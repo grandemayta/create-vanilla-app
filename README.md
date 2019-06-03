@@ -35,7 +35,7 @@ npm start
 | npm run prod:legacy | Generate a build in prod mode to support legacy browsers |
 
 ## Integration
-Npm build task will create the following output:
+Build tasks will create the following output:
 
 ### Build for modern browsers:
 
@@ -43,18 +43,20 @@ Npm build task will create the following output:
         ├── vendor.min.js
         ├── bundle.min.js
 
-### Build to add support to legacy browsers:
+### Build to add support for legacy browsers:
 
     ├── dist/
         ├── polyfills.min.js
         ├── webcomponents-loader.js
         ├── vendor.min.js
         ├── bundle.min.js
-        ├── bundles/                             # These scripts will load at runtime
+        ├── bundles/                               # These scripts will load at runtime
             ├── webcomponents-ce.js
             ├── webcomponents-sd-ce-pf.js
             ├── webcomponents-sd-ce.js
             ├── webcomponents-sd.js
+
+### Html example:
 
 ```html
 <!DOCTYPE html>
@@ -62,11 +64,11 @@ Npm build task will create the following output:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Components Integration</title>
+    <title>Web Components Example Integration</title>
 </head>
 <body>
 
-    <app-greetings fullname="Gabriel"></app-greetings>
+    <app-greetings fullname="Charlotte"></app-greetings>
 
     <!-- If you want support legacy browser just remove this comment
     <script src="polyfills.min.js" nomodule></script>
