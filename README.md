@@ -34,7 +34,32 @@ npm start
 | npm run dev:legacy | Generate a build in dev mode to support legacy browsers |
 | npm run prod:legacy | Generate a build in prod mode to support legacy browsers |
 
-# Integration
+## Integration
+Npm build task will create the following output:
+
+### Build for modern browsers:
+.
+├── dist
+    ├── vendor.min.js
+    ├── bundle.min.js
+├── fixtures                    # Main template
+    ├── data
+        ├── example.json
+    ├── index.pug
+
+### Build to add support to legacy browsers:
+
+.
+├── dist
+    ├── polyfills.min.js
+    ├── webcomponents-loader.js
+    ├── vendor.min.js
+    ├── bundle.min.js
+    ├── bundles                             # These scripts will load at runtime
+        ├── webcomponents-ce.js
+        ├── webcomponents-sd-ce-pf.js
+        ├── webcomponents-sd-ce.js
+        ├── webcomponents-sd.js
 
 ```html
 <!DOCTYPE html>
