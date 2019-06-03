@@ -37,13 +37,13 @@ npm start
 ## Integration
 Build tasks will create the following output:
 
-### Build for modern browsers:
+#### Build for modern browsers:
 
     ├── dist/
         ├── vendor.min.js
         ├── bundle.min.js
 
-### Build to add support for legacy browsers:
+#### Build to add support for legacy browsers:
 
     ├── dist/
         ├── polyfills.min.js
@@ -56,7 +56,7 @@ Build tasks will create the following output:
             ├── webcomponents-sd-ce.js
             ├── webcomponents-sd.js
 
-### Html example:
+#### Html example:
 
 ```html
 <!DOCTYPE html>
