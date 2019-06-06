@@ -1,5 +1,5 @@
 # WebComponents CLI
-[![NPM version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=0.0.6)](http://badge.fury.io/js/badge-list)
+[![NPM version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=0.0.7)](http://badge.fury.io/js/badge-list)
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![made-with-javascript-doc](https://img.shields.io/badge/Made%20with-Javascript-1f425f.svg)](https://www.sphinx-doc.org/)
 
@@ -119,6 +119,10 @@ We support the following features:
 :white_check_mark: Edge
 <br/>
 :white_check_mark: IE11
+
+## Documentation
+
+Use the [official guide](https://lit-element.polymer-project.org/guide) to create WebComponents with LitElement
 
 ## Todo
 

@@ -111,6 +111,10 @@ We support the following features:
 npm run prod
 ```
 
+## Documentation
+
+Use the [official guide](https://lit-element.polymer-project.org/guide) to create WebComponents with LitElement
+
 ## Todo
 
 - [ ] Improve the documentation

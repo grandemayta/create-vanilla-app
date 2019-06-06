@@ -5,7 +5,7 @@
   "bin": {
     "wc-cli": "cli.js"
   },
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": {
     "name": "Gabriel Mayta",
     "email": "grandemayta@gmail.com",
