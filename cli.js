@@ -43,10 +43,9 @@ class WebComponentsCLI {
   }
 
   copyBoilerplate(projectData) {
-    mfsEditor.copyTpl(
-      `${this.src}/.gitignore`,
-      `${this.dest}/.gitignore`,
-      projectData
+    mfsEditor.copy(
+      `${this.src}/gitignore`,
+      `${this.dest}/.gitignore`
     );
     mfsEditor.copyTpl(
       `${this.src}`,
