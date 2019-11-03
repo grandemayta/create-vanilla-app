@@ -3,4 +3,4 @@
 [![made-with-javascript-doc](https://img.shields.io/badge/Made%20with-Javascript-1f425f.svg)](https://www.sphinx-doc.org/)
 
 Project created with [Create Vanilla App](https://github.com/grandemayta/create-vanilla-app.git).
-For more details follow the official documentation.
+For more details follow the [official documentation](https://github.com/grandemayta/create-vanilla-app#getting-started).
