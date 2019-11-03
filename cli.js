@@ -23,7 +23,7 @@ class WebComponentsCLI {
     clear();
     this.log(
       chalk.yellow(
-        figlet.textSync('Web Components', {
+        figlet.textSync('Vanilla TS', {
           horizontalLayout: 'default',
           verticalLayout: 'default'
         })

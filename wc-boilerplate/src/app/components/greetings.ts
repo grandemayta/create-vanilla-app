@@ -1,22 +1,23 @@
-import { css, customElement, html, LitElement, property } from 'lit-element';
-
-@customElement('app-greetings')
-class Greetings extends LitElement {
-  static get styles() {
-    return css`
-      h1 {
-        color: blue;
-      }
-    `;
+export class Greetings extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
   }
 
-  @property({ type: String }) private fullname;
+  get fullname() {
+    return this.getAttribute('fullname');
+  }
 
   public render() {
-    return html`
+    this.shadowRoot.innerHTML = `
+      <style>
+        h1 {
+          color: blue;
+        }
+      </style>
       <h1>Hello ${this.fullname}</h1>
     `;
   }
 }
 
-export default Greetings;
+customElements.define('app-greetings', Greetings);

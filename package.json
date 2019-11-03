@@ -1,11 +1,11 @@
 {
-  "name": "@grandemayta/webcomponents-cli",
+  "name": "create-vanilla-app",
   "main": "cli.js",
   "preferGlobal": true,
   "bin": {
-    "wc-cli": "cli.js"
+    "create-vanilla-app": "cli.js"
   },
-  "version": "0.0.9",
+  "version": "0.0.1",
   "author": {
     "name": "Gabriel Mayta",
     "email": "grandemayta@gmail.com",
@@ -25,14 +25,13 @@
     "path": "^0.12.7",
     "yarn": "^1.16.0"
   },
-  "description": "WebComponents CLI allow you to develop WebComponents from scratch with LitElement and Typescript",
+  "description": "Create Vanilla App allows you to develop vanilla javascript projects from scratch with support to Webcomponents and Typescript",
   "keywords": [
     "webcomponents",
-    "litelement",
-    "lithtml",
     "customelements",
+    "vanillaJS",
     "typescript"
   ],
-  "repository": "https://github.com/grandemayta/webcomponents-cli.git",
+  "repository": "https://github.com/grandemayta/create-vanilla-app.git",
   "license": "MIT"
 }

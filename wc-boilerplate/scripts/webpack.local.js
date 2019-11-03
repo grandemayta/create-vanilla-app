@@ -29,7 +29,6 @@ module.exports = merge(common, {
       template: `${src}/demo/index.html`,
       filename: 'index.html',
       chunks: [
-        'vendor',
         'bundle'
       ],
       chunksSortMode: "manual",

@@ -5,20 +5,11 @@ const dist = path.resolve(__dirname, '../dist');
 
 module.exports = {
   entry: {
-    vendor: ['lit-element'],
     bundle: `${src}/app/index.ts`
   },
   optimization: {
     splitChunks: {
-      maxAsyncRequests: 1,
-      cacheGroups: {
-        vendor: {
-          chunks: 'initial',
-          name: 'vendor',
-          test: 'vendor',
-          enforce: true
-        }
-      }
+      maxAsyncRequests: 1
     }
   },
   module: {

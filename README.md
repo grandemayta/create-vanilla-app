@@ -1,21 +1,8 @@
-# WebComponents CLI
-[![NPM version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=0.0.9)](http://badge.fury.io/js/badge-list)
+# Create Vanilla App
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![made-with-javascript-doc](https://img.shields.io/badge/Made%20with-Javascript-1f425f.svg)](https://www.sphinx-doc.org/)
 
-WebComponents CLI allow you to develop WebComponents from scratch with LitElement and Typescript.
-
-## Install
-
-```sh
-npm install -g @grandemayta/webcomponents-cli
-```
-
-## Create a Project
-
-```sh
-wc-cli <name-of-your-project>
-```
+Create Vanilla App allows you to develop vanilla javascript projects from scratch with support to Webcomponents and Typescript.
 
 ## Getting Started
 Launch the following commands to start the application:
@@ -40,7 +27,6 @@ Build tasks will create the following output:
 #### Build for modern browsers:
 
     ├── dist/
-        ├── vendor.min.js
         ├── bundle.min.js
 
 #### Build with support for legacy browsers:
@@ -48,7 +34,6 @@ Build tasks will create the following output:
     ├── dist/
         ├── polyfills.min.js
         ├── webcomponents-loader.js
-        ├── vendor.min.js
         ├── bundle.min.js
         ├── bundles/                               # These scripts will load at runtime
             ├── webcomponents-ce.js
@@ -74,7 +59,6 @@ Build tasks will create the following output:
     <script src="polyfills.min.js" nomodule></script>
     <script src="webcomponents-loader.js"></script>
     -->
-    <script src="vendor.min.js"></script>
     <script src="bundle.min.js"></script>
 </body>
 </html>
@@ -119,6 +103,10 @@ We support the following features:
 :white_check_mark: Edge
 <br/>
 :white_check_mark: IE11
+
+```sh
+npm run prod
+```
 
 ## Documentation
 
