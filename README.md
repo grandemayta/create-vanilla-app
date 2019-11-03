@@ -2,7 +2,7 @@
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![made-with-javascript-doc](https://img.shields.io/badge/Made%20with-Javascript-1f425f.svg)](https://www.sphinx-doc.org/)
 
-Create Vanilla App allows you to develop vanilla javascript projects from scratch with support to Webcomponents and Typescript.
+Create Vanilla App allows you to develop vanilla javascript projects from scratch with support to Webcomponents, Sass and Typescript.
 
 ## Summary
 - [Installation](#install)
@@ -52,14 +52,16 @@ Build tasks will create the following output:
 #### Build for modern browsers:
 
     ├── dist/
+        ├── styles.min.css
         ├── bundle.min.js
 
 #### Build with support for legacy browsers:
 
     ├── dist/
+        ├── styles.min.css
+        ├── bundle.min.js
         ├── polyfills.min.js
         ├── webcomponents-loader.js
-        ├── bundle.min.js
         ├── bundles/                               # These scripts will load at runtime
             ├── webcomponents-ce.js
             ├── webcomponents-sd-ce-pf.js
@@ -75,6 +77,7 @@ Build tasks will create the following output:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Vanilla App Example Integration</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
