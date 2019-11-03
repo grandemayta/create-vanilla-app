@@ -49,7 +49,7 @@ Build tasks will create the following output:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Components Example Integration</title>
+    <title>Create Vanilla App Example Integration</title>
 </head>
 <body>
 
@@ -108,12 +108,7 @@ We support the following features:
 npm run prod
 ```
 
-## Documentation
-
-Use the [official guide](https://lit-element.polymer-project.org/guide) to create WebComponents with LitElement
-
 ## Todo
-
 - [ ] Improve the documentation
 - [ ] Setup Unit Testing
 - [ ] Setup E2E Testing
