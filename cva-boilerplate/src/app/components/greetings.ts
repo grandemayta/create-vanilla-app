@@ -8,6 +8,10 @@ export class Greetings extends HTMLElement {
     return this.getAttribute('fullname');
   }
 
+  public connectedCallback() {
+    this.render();
+  }
+
   public render() {
     this.shadowRoot.innerHTML = `
       <style>

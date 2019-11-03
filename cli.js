@@ -14,7 +14,7 @@ const mfsEditor = memFsEditor.create(memFs.create());
 class WebComponentsCLI {
   constructor() {
     this.root = path.resolve(__dirname, './');
-    this.src = path.resolve(__dirname, './wc-boilerplate');
+    this.src = path.resolve(__dirname, './cva-boilerplate');
     this.dest = ''
     this.log = console.log;
   }
@@ -23,7 +23,7 @@ class WebComponentsCLI {
     clear();
     this.log(
       chalk.yellow(
-        figlet.textSync('Vanilla TS', {
+        figlet.textSync('Create Vanilla App', {
           horizontalLayout: 'default',
           verticalLayout: 'default'
         })
@@ -32,15 +32,15 @@ class WebComponentsCLI {
   }
 
   showInfo(message) {
-    this.log(chalk.blue(`[WC CLI] Info: ${message}`));
+    this.log(chalk.blue(`[CVA CLI] Info: ${message}`));
   }
 
   showSuccess(message) {
-    this.log(chalk.green(`[WC CLI] Success: ${message}`));
+    this.log(chalk.green(`[CVA CLI] Success: ${message}`));
   }
 
   showError(message) {
-    this.log(chalk.red(`[WC CLI] Error: ${message}`));
+    this.log(chalk.red(`[CVA CLI] Error: ${message}`));
   }
 
   copyBoilerplate(projectData) {
