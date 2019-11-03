@@ -5,16 +5,16 @@
 Create Vanilla App allows you to develop vanilla javascript projects from scratch with support to Webcomponents and Typescript.
 
 ## Summary
-- Installation
-- Create a project
-- Getting started
-- Scripts availables
-- Integration
-    - Build for modern browsers
-    - Build with support for legacy browsers:
-    -  Html example
-- Polyfills
-- Browsers support
+- [Installation](#install)
+- [Create a project](#create-a-project)
+- [Getting started](#getting-started)
+- [Scripts availables](#scripts)
+- [Integration](#integration)
+    - [Build for modern browsers](#build-for-modern-browsers)
+    - [Build with support for legacy browsers](#build-with-support-for-legacy-browsers)
+    - [Html example](#html-example)
+- [Polyfills](#polyfills)
+- [Browsers support](#browsers-support)
 
 ## Install
 
