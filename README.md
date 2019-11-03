@@ -4,6 +4,18 @@
 
 Create Vanilla App allows you to develop vanilla javascript projects from scratch with support to Webcomponents and Typescript.
 
+## Summary
+- Installation
+- Create a project
+- Getting started
+- Scripts availables
+- Integration
+    - Build for modern browsers
+    - Build with support for legacy browsers:
+    -  Html example
+- Polyfills
+- Browsers support
+
 ## Install
 
 ```sh
@@ -14,6 +26,7 @@ npm install -g create-vanilla-app
 
 ```sh
 create-vanilla-app <name-of-your-project>
+```
 
 ## Getting Started
 Launch the following commands to start the application:
