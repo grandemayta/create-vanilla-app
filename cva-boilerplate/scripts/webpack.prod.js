@@ -1,4 +1,6 @@
 const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const argv = require('minimist')(process.argv.slice(2));
 const UglifyJS = require("uglify-es");
 const path = require('path');
@@ -14,6 +16,9 @@ const webpackProdConfig = merge(common, {
     filename: '[name].min.js'
   }
 });
+
+webpackProdConfig.plugins.push(new MiniCssExtractPlugin({ filename: 'styles.min.css' }));
+webpackProdConfig.plugins.push(new OptimizeCssAssetsPlugin());
 
 if (argv['legacy']) {
   webpackProdConfig.entry.polyfills = polyfills;
