@@ -15,6 +15,7 @@ Create Vanilla App allows you to develop vanilla javascript projects from scratc
     - [Html example](#html-example)
 - [Polyfills](#polyfills)
 - [Browsers support](#browsers-support)
+- [Todo](#todo)
 
 ## Install
 
@@ -133,6 +134,7 @@ npm run prod
 ```
 
 ## Todo
+- [ ] Add Sass support
 - [ ] Improve the documentation
 - [ ] Setup Unit Testing
 - [ ] Setup E2E Testing
