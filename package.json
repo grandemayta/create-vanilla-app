@@ -5,7 +5,7 @@
   "bin": {
     "create-vanilla-app": "cli.js"
   },
-  "version": "1.1.4",
+  "version": "1.1.5",
   "author": {
     "name": "Gabriel Mayta",
     "email": "grandemayta@gmail.com",
