@@ -50,7 +50,7 @@ class WebComponentsCLI {
       projectData
     );
     mfsEditor.copy(
-      `${this.src}/.gitignore`,
+      `${this.root}/.gitignore`,
       `${this.dest}/.gitignore`
     );
   }
