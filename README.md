@@ -1,4 +1,4 @@
-# Create Vanilla App
+# Create Vanilla App 🔧📦
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![made-with-javascript-doc](https://img.shields.io/badge/Made%20with-Javascript-1f425f.svg)](https://www.sphinx-doc.org/)
 
@@ -137,8 +137,7 @@ npm run prod
 ```
 
 ## Todo
-- [ ] Add Sass support
-- [ ] Improve the documentation
+
 - [ ] Setup Unit Testing
 - [ ] Setup E2E Testing
 
