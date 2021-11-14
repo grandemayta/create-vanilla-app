@@ -1,4 +1,4 @@
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const src = path.resolve(__dirname, '../src');
@@ -27,10 +27,16 @@ module.exports = {
         exclude: /webcomponentsjs/
       },
       {
-        test: /\.scss$/,
-        loader: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        test: /\.s?css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
         exclude: /node_modules/
-      }
+      },
+      {
+        test: /\.(woff|woff2|ttf|otf)$/,
+        use: {
+          loader: 'url-loader',
+        },
+      },
     ]
   },
   resolve: {
@@ -38,10 +44,6 @@ module.exports = {
     modules: ['node_modules', 'src']
   },
   plugins: [
-    new CleanWebpackPlugin([dist], {
-      root: process.cwd(),
-      verbose: true,
-      dry: false
-    })
+    new CleanWebpackPlugin()
   ]
 };

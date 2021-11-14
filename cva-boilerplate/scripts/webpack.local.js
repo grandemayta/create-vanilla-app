@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const NoModulePlugin = require('webpack-nomodule-plugin').WebpackNoModulePlugin;
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const common = require('./webpack.common');
 const path = require('path');
 
@@ -21,7 +21,6 @@ module.exports = merge(common, {
   },
   devtool: 'source-map',
   devServer: {
-    contentBase: dist,
     port: 3002,
     open: true
   },

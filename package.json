@@ -15,15 +15,14 @@
     "start": "node ./cli.js"
   },
   "dependencies": {
-    "chalk": "^2.4.2",
+    "chalk": "^4.1.2",
     "clear": "^0.1.0",
-    "figlet": "^1.2.3",
-    "inquirer": "^6.3.1",
-    "mem-fs": "^1.1.3",
-    "mem-fs-editor": "^6.0.0",
-    "npm": "^6.9.0",
-    "path": "^0.12.7",
-    "yarn": "^1.17.3"
+    "figlet": "^1.5.2",
+    "inquirer": "^8.2.0",
+    "mem-fs": "^2.2.1",
+    "mem-fs-editor": "^9.3.0",
+    "minimist": "^1.2.5",
+    "path": "^0.12.7"
   },
   "description": "Create Vanilla App allows you to develop vanilla javascript projects from scratch with support to Webcomponents and Typescript",
   "keywords": [

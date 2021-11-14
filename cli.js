@@ -6,7 +6,6 @@ const figlet = require('figlet');
 const chalk = require('chalk');
 const memFs = require('mem-fs');
 const memFsEditor = require('mem-fs-editor');
-const npm = require('npm');
 const argv = require('minimist')(process.argv.slice(2));
 const questions = require('./questions');
 const mfsEditor = memFsEditor.create(memFs.create());
@@ -67,10 +66,8 @@ class WebComponentsCLI {
 
     mfsEditor.commit(() => {
       process.chdir(this.dest);
-      npm.load(() => npm.commands.install([], () => {
-        this.showSuccess(`${name} project has been successfully created!`);
-        this.showInfo('To launch the application just type npm start');
-      }));
+      this.showSuccess(`${name} project has been successfully created!`);
+      this.showInfo('First run npm install then, to launch the application just type npm start');
     });
   }
 
